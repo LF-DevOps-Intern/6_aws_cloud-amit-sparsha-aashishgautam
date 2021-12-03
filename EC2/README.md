@@ -23,6 +23,10 @@ Selected t2 micro tier for instance type.
 
 ![instance type t2 micro selected](https://user-images.githubusercontent.com/53372486/144471464-4f89d6aa-c9a2-4850-b418-3d262162ef20.PNG)
 
+We selected the default configuration in Instace configuration .<br/>
+![instance configured](https://user-images.githubusercontent.com/53372486/144471458-bc085cf3-5998-4b77-ad4f-47d179a4daff.PNG)
+
+
 Changed the volume type to Elastic Block Storage and have allocated 10 GB of space as per the instruction.
 
 ![EBS storage added](https://user-images.githubusercontent.com/53372486/144471452-0acf5a35-b0e7-4f13-9ca1-5d75cf544135.PNG)
@@ -30,9 +34,11 @@ Changed the volume type to Elastic Block Storage and have allocated 10 GB of spa
 
 
 
+
+
 ![creatng new key pair](https://user-images.githubusercontent.com/53372486/144471444-d5d46ce2-94e7-4e30-b161-303badfeb096.PNG)
 
-![instance configured](https://user-images.githubusercontent.com/53372486/144471458-bc085cf3-5998-4b77-ad4f-47d179a4daff.PNG)
+
 ![instance running successfully](https://user-images.githubusercontent.com/53372486/144471463-1cc49e53-c805-4f9e-8410-5e9f4f5a9f8a.PNG)
 
 ![launch status checked](https://user-images.githubusercontent.com/53372486/144471468-b8956f38-3edf-4bff-a73c-63638aaf3ad5.PNG)
