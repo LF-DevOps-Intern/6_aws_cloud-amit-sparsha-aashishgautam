@@ -1,0 +1,1 @@
+7. Create S3 VPC Endpoint and add its route to both public and private Route tables.
