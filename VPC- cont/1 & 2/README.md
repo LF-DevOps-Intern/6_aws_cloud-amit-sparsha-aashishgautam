@@ -11,7 +11,7 @@
 
 ![Public subnet 1](https://user-images.githubusercontent.com/53372486/144756068-242a4e32-3c3a-4edd-81e6-5096dcd308f6.PNG)<br/>
 
-#### #### public subnet 2<br/>
+#### public subnet 2<br/>
 
 ![Public subnet 2](https://user-images.githubusercontent.com/53372486/144756058-3f8d288e-bb8a-4391-a8d4-45847d362630.PNG)<br/>
 

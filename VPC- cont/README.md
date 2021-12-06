@@ -1,5 +1,5 @@
 All task are in continuation of yesterday’s setup. Use same VPC and tag convention for all resources.
-(Optional) Enable VPC Flow Logs via CloudWatch Log.
+- (Optional) Enable VPC Flow Logs via CloudWatch Log.
 1. Create 3 subnets in each AZ to be used as public.
 2. Create 3 subnets in each AZ to be used as private.
 3. Create Public Route Table and associate public subnets.
