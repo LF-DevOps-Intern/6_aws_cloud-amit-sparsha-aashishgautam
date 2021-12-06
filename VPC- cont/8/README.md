@@ -5,3 +5,5 @@
   - (Optional) Create a OpenVPN Client with Split tunnel to use that Server Help1, Help2, Help3
 
 Steps:
+Allow SSH
+
