@@ -31,29 +31,41 @@ open in webbrowser
 ### Install and Setup OpenVPN Server, open ports required to use it for these CIDR ranges 27,43,45,72,103,110,112,124,139,150,163,202.0.0.0/8 and your own IPs
 
 Install openvpn<br/>
-![openvpn](https://user-images.githubusercontent.com/53372486/144970388-5be36029-7ecc-4f10-ada6-d65a038e8781.png)<br/>
+Open CLI and download installation script
+```
+curl -O https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh
+```
+Add executable permission <br/>
+```
+chmod +x openvpn-install.sh
+```
+Run the script<br/>
+```
+sudo /bin/bash openvpn-install.sh
+```
+![openvpn](https://user-images.githubusercontent.com/53372486/145210418-e36b7fe4-8333-4d93-89cd-622ef0222d00.png)<br/>
 
 checking status after configuration <br/>
 
 ![status openvpn](https://user-images.githubusercontent.com/53372486/144970399-0fb56a07-a094-4aa4-ace4-88c3dcf3a376.png)<br/>
 
 Now check tunnel<br/>
+```
+ip a
+```
+![tun_0_done](https://user-images.githubusercontent.com/53372486/145209865-2f81a038-26f0-4738-965d-307c8cf3c65b.png)<br/>
 
-![tun_0_done](https://user-images.githubusercontent.com/53372486/144970402-4d18ca7c-f1b6-487d-b759-3b56cbe23f27.png)<br/>
+Checking<br/>
 
-Connect with client<br/>
-
-![client_ovpn](https://user-images.githubusercontent.com/53372486/144970381-a7f083ed-abda-4707-9ba2-9973257b4f5f.png)<br/>
-
-![open_vpn_connect](https://user-images.githubusercontent.com/53372486/144970387-33d2a8ca-f05d-45b0-9105-33adc7e7a05f.png)<br/>
+![web](https://user-images.githubusercontent.com/53372486/145210449-2fa75d22-4a25-410e-a084-47ba8911ebcb.png)
 
 Add CIDR ranges<br/>
 
-![CIDR ranges for OVPN added part 1](https://user-images.githubusercontent.com/53372486/144970374-f54b8eba-72af-4b2c-b910-d7b698e08034.PNG)
+![CIDR ranges for OVPN added part 1](https://user-images.githubusercontent.com/53372486/144970374-f54b8eba-72af-4b2c-b910-d7b698e08034.PNG)<br/>
 
-![CIDR ranges for OVPN added part 2](https://user-images.githubusercontent.com/53372486/144970377-fa023ff5-c78b-4f0d-b059-2ea6734b1f5a.PNG)
+![CIDR ranges for OVPN added part 2](https://user-images.githubusercontent.com/53372486/144970377-fa023ff5-c78b-4f0d-b059-2ea6734b1f5a.PNG)<br/>
 
-![CIDR ranges for OVPN verified](https://user-images.githubusercontent.com/53372486/144970379-492d7711-b1c2-4eb4-8178-846fa782e450.PNG)
+![CIDR ranges for OVPN verified](https://user-images.githubusercontent.com/53372486/144970379-492d7711-b1c2-4eb4-8178-846fa782e450.PNG)<br/>
 
 
 
