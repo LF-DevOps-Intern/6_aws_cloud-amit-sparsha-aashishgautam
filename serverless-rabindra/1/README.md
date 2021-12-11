@@ -88,7 +88,7 @@ DATABASE="hello"
 BACKUP_DIRECTORY="/home/ec2-user/backup/dumpfiles"
 
 # Date stamp
-CURRENT_DATE=pgdump_EC2_$(date +"%m%d_%H%M_%s")
+CURRENT_DATE=pgdump_$(date +"%m%d_%H%M_%s")
 
 # Create the backup 
 pg_dump -U $USER $DATABASE >> $BACKUP_DIRECTORY/$DATABASE\_$CURRENT_DATE.sql
@@ -96,7 +96,7 @@ pg_dump -U $USER $DATABASE >> $BACKUP_DIRECTORY/$DATABASE\_$CURRENT_DATE.sql
 # Upload to cloud
 aws s3 cp $BACKUP_DIRECTORY/$DATABASE\_$CURRENT_DATE.sql s3://rabindra-db/_$CURRENT_DATE.sql --profile lft-training
 ```
-![dumpscript](https://user-images.githubusercontent.com/53372486/145670341-fde81a66-899d-4a40-8a40-35ad812d914b.png)<br/>
+![dumpscript](https://user-images.githubusercontent.com/53372486/145671271-eed87cd3-3ebc-489f-a680-4296f684d93f.png)<br/>
 
 Run dump.sh<br/>
 ```
@@ -106,7 +106,15 @@ Run dump.sh<br/>
 
 Now check in s3 bucket<br/>
 
+![bucket](https://user-images.githubusercontent.com/53372486/145671269-f0a24dc9-e347-48be-b303-b5e0ab06d5b3.png)<br/>
+
+Check permission<br/>
+
 ![not accesible](https://user-images.githubusercontent.com/53372486/145670346-eebc50d3-5d85-48ae-ad5f-dc79a26ec66f.png)<br/>
+
+Click on url<br/>
+
+![After clcik on url](https://user-images.githubusercontent.com/53372486/145682371-00f4097f-2fa0-445d-a790-e7f56adcbc5a.png)<br/>
 
 Used crontab For 3 time backup<br/>
 Check crontab<br/>  
@@ -130,6 +138,8 @@ Again Check crontab after added rule<br/>
 crontab -l
 ```
 ![check crontab](https://user-images.githubusercontent.com/53372486/145670336-bbe33e03-7c98-4dca-9d3a-5164a2d2a5ba.png)
+
+
 
 
 
