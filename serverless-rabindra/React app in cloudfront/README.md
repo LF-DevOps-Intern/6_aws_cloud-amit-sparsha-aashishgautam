@@ -56,6 +56,7 @@ Change file name in url<br/>
 
 Now we have add Static website hosting in property<br/>
 Add Static website hosting in property <br/>
+
 ![static](https://user-images.githubusercontent.com/53372486/145705654-0a88aba1-5a00-4a9a-b09e-62e14401032a.png)<br/>
 
 
@@ -73,8 +74,33 @@ Add file name in url <br/>
 ![add other file](https://user-images.githubusercontent.com/53372486/145706022-8fddd93e-bf0c-416f-a221-4360ee827155.png)<br/>
 
 Now search cloudfront<br/>
-Create 
+click on Create Distribution<br/>
 
+![create distribution](https://user-images.githubusercontent.com/53372486/145781140-aaf6b7f3-9134-47ac-9d14-f1635e9948b8.png)<br/>
+
+![origin1](https://user-images.githubusercontent.com/53372486/145781157-72cce65a-aeaa-433d-aa94-1239fe63de23.png)<br/>
+
+![origin2](https://user-images.githubusercontent.com/53372486/145781165-d3508a3e-2e1c-4e3f-9f7c-dbc6a6fcf2dd.png)<br/>
+
+verified created Distribution<br/>
+
+![verified](https://user-images.githubusercontent.com/53372486/145781198-a230aeee-9c16-4960-b8cb-95fad02e451f.png)<br/>
+
+Copy link and open in anorther tab<br/>
+
+![link](https://user-images.githubusercontent.com/53372486/145781148-b34cfa55-b6dd-4d97-933a-dbf8b29cef34.png)<br/>
+
+Check website<br/>
+
+![cludfront](https://user-images.githubusercontent.com/53372486/145781115-aac854b4-a596-49ec-a836-651049362578.png)<br/>
+
+Now Create custom error response for 200 response in error page<br/>
+
+![error response](https://user-images.githubusercontent.com/53372486/145781143-9878e7e2-f672-4038-b4ce-f7ab7c7c9acd.png)<br/>
+
+After deploy now add _/hhd_ and check response<br/>
+
+![200 response](https://user-images.githubusercontent.com/53372486/145781070-39afc761-109a-4d51-b0be-2085c3a6c91c.png)<br/>
 
 
 
