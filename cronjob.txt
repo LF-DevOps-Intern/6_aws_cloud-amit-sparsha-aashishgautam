@@ -1,0 +1,2 @@
+* */8 * * * /home/durbs/task/1.py
+
