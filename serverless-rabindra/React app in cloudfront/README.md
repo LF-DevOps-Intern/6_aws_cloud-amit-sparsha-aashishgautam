@@ -60,7 +60,7 @@ aws s3 sync build s3://rabindra-react --profile lft-training
 ![static](https://user-images.githubusercontent.com/53372486/145705654-0a88aba1-5a00-4a9a-b09e-62e14401032a.png)<br/>
 
 
-**click on Bucket website endpoint**<br/>
+**Click on Bucket website endpoint**<br/>
 
 ![add static](https://user-images.githubusercontent.com/53372486/145705644-e4e15cec-1493-4c98-8268-071f02ced334.png)<br/>
 
@@ -82,11 +82,11 @@ aws s3 sync build s3://rabindra-react --profile lft-training
 
 ![origin2](https://user-images.githubusercontent.com/53372486/145781165-d3508a3e-2e1c-4e3f-9f7c-dbc6a6fcf2dd.png)<br/>
 
-**verified created Distribution**<br/>
+**Verified created Distribution**<br/>
 
 ![verified](https://user-images.githubusercontent.com/53372486/145781198-a230aeee-9c16-4960-b8cb-95fad02e451f.png)<br/>
 
-**Copy link and open in anorther tab**<br/>
+**Copy link and open in another tab**<br/>
 
 ![link](https://user-images.githubusercontent.com/53372486/145781148-b34cfa55-b6dd-4d97-933a-dbf8b29cef34.png)<br/>
 
@@ -98,7 +98,7 @@ aws s3 sync build s3://rabindra-react --profile lft-training
 
 ![error response](https://user-images.githubusercontent.com/53372486/145781143-9878e7e2-f672-4038-b4ce-f7ab7c7c9acd.png)<br/>
 
-**After deploy now add _/hhd_ and check response**<br/>
+**After deploy now add _anyname_ and check response**<br/>
 
 ![200 response](https://user-images.githubusercontent.com/53372486/145781070-39afc761-109a-4d51-b0be-2085c3a6c91c.png)<br/>
 
