@@ -1,0 +1,297 @@
+{
+  "sdkResponseMetadata": null,
+  "sdkHttpMetadata": null,
+  "partial": false,
+  "permissionsBoundary": null,
+  "policies": [
+    {
+      "arn": "arn:aws:iam::949263681218:policy/service-role/AWSLambdaS3ExecutionRole-3cf7babf-7975-4d81-8b10-1529a1dcec6e",
+      "document": {
+        "Version": "2012-10-17",
+        "Statement": [
+          {
+            "Effect": "Allow",
+            "Action": [
+              "s3:GetObject"
+            ],
+            "Resource": "arn:aws:s3:::*"
+          }
+        ]
+      },
+      "id": "ANPA52BEGI3BDAZMMH7G5",
+      "name": "AWSLambdaS3ExecutionRole-3cf7babf-7975-4d81-8b10-1529a1dcec6e",
+      "type": "managed"
+    },
+    {
+      "arn": "arn:aws:iam::949263681218:policy/service-role/AWSLambdaBasicExecutionRole-538f1517-9c21-45d3-b075-c070e1a23f23",
+      "document": {
+        "Version": "2012-10-17",
+        "Statement": [
+          {
+            "Effect": "Allow",
+            "Action": "logs:CreateLogGroup",
+            "Resource": "arn:aws:logs:us-east-1:949263681218:*"
+          },
+          {
+            "Effect": "Allow",
+            "Action": [
+              "logs:CreateLogStream",
+              "logs:PutLogEvents"
+            ],
+            "Resource": [
+              "arn:aws:logs:us-east-1:949263681218:log-group:/aws/lambda/manip:*"
+            ]
+          }
+        ]
+      },
+      "id": "ANPA52BEGI3BHFD2KWBIM",
+      "name": "AWSLambdaBasicExecutionRole-538f1517-9c21-45d3-b075-c070e1a23f23",
+      "type": "managed"
+    },
+    {
+      "arn": "arn:aws:iam::aws:policy/AmazonS3FullAccess",
+      "document": {
+        "Version": "2012-10-17",
+        "Statement": [
+          {
+            "Effect": "Allow",
+            "Action": [
+              "s3:*",
+              "s3-object-lambda:*"
+            ],
+            "Resource": "*"
+          }
+        ]
+      },
+      "id": "ANPAIFIR6V6BVTRAHWINE",
+      "name": "AmazonS3FullAccess",
+      "type": "managed"
+    },
+    {
+      "arn": "arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess",
+      "document": {
+        "Version": "2012-10-17",
+        "Statement": [
+          {
+            "Effect": "Allow",
+            "Action": [
+              "s3:Get*",
+              "s3:List*",
+              "s3-object-lambda:Get*",
+              "s3-object-lambda:List*"
+            ],
+            "Resource": "*"
+          }
+        ]
+      },
+      "id": "ANPAIZTJ4DXE7G6AGAE6M",
+      "name": "AmazonS3ReadOnlyAccess",
+      "type": "managed"
+    },
+    {
+      "arn": "arn:aws:iam::aws:policy/service-role/AmazonS3ObjectLambdaExecutionRolePolicy",
+      "document": {
+        "Version": "2012-10-17",
+        "Statement": [
+          {
+            "Effect": "Allow",
+            "Action": [
+              "logs:CreateLogGroup",
+              "logs:CreateLogStream",
+              "logs:PutLogEvents",
+              "s3-object-lambda:WriteGetObjectResponse"
+            ],
+            "Resource": "*"
+          }
+        ]
+      },
+      "id": "ANPAZKAPJZG4PG47VBSXA",
+      "name": "AmazonS3ObjectLambdaExecutionRolePolicy",
+      "type": "managed"
+    }
+  ],
+  "resources": {
+    "s3": {
+      "service": {
+        "icon": "data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNjQgNjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGcgdHJhbnNmb3JtPSJzY2FsZSguOCkiPgogICAgPGRlZnM+CiAgICAgIDxsaW5lYXJHcmFkaWVudCB4MT0iMCUiIHkxPSIxMDAlIiB4Mj0iMTAwJSIgeTI9IjAlIiBpZD0iYSI+CiAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzFCNjYwRiIgb2Zmc2V0PSIwJSIvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiM2Q0FFM0UiIG9mZnNldD0iMTAwJSIvPgogICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgPHBhdGggZD0iTTAgMGg4MHY4MEgweiIgZmlsbD0idXJsKCNhKSIvPgogICAgICA8cGF0aCBkPSJNNjAuODM2IDQyLjg5M2wuMzg0LTIuNzA0YzMuNTQgMi4xMiAzLjU4NyAyLjk5NyAzLjU4NiAzLjAyLS4wMDYuMDA2LS42MS41MS0zLjk3LS4zMTZ6bS0xLjk0My0uNTRDNTIuNzczIDQwLjUgNDQuMjUgMzYuNTkgNDAuOCAzNC45NmMwLS4wMTQuMDA0LS4wMjcuMDA0LS4wNDFhMi40MDYgMi40MDYgMCAwMC0yLjQwNC0yLjQwMyAyLjQwNiAyLjQwNiAwIDAwLTIuNDAyIDIuNDAzIDIuNDA2IDIuNDA2IDAgMDAyLjQwMiAyLjQwM2MuNTgyIDAgMS4xMS0uMjE3IDEuNTI3LS41NjIgNC4wNTggMS45MiAxMi41MTUgNS43NzQgMTguNjggNy41OTRMNTYuMTcgNjEuNTZhLjk1NS45NTUgMCAwMC0uMDEuMTRjMCAxLjUxNi02LjcwNyA0LjI5OS0xNy42NjYgNC4yOTktMTEuMDc1IDAtMTcuODUzLTIuNzgzLTE3Ljg1My00LjI5OCAwLS4wNDYtLjAwMy0uMDkxLS4wMS0uMTM2bC01LjA5My0zNy4yMDdjNC40MDkgMy4wMzUgMTMuODkyIDQuNjQgMjIuOTYyIDQuNjQgOS4wNTYgMCAxOC41MjMtMS42IDIyLjk0LTQuNjI1bC0yLjU0NyAxNy45Nzl6TTE1IDIwLjQ3OEMxNS4wNzIgMTkuMTYyIDIyLjYzNCAxNCAzOC41IDE0YzE1Ljg2NCAwIDIzLjQyNyA1LjE2IDIzLjUgNi40Nzh2LjQ0OUM2MS4xMyAyMy44NzcgNTEuMzMgMjcgMzguNSAyN2MtMTIuODUyIDAtMjIuNjU3LTMuMTMyLTIzLjUtNi4wODd2LS40MzV6bTQ5IC4wMjJjMC0zLjQ2NS05LjkzNC04LjUtMjUuNS04LjVTMTMgMTcuMDM1IDEzIDIwLjVsLjA5NC43NTQgNS41NDggNDAuNTI0QzE4Ljc3NSA2Ni4zMSAzMC44NiA2OCAzOC40OTQgNjhjOS40NzIgMCAxOS41MzUtMi4xNzggMTkuNjY1LTYuMjJsMi4zOTYtMTYuODk2YzEuMzMzLjMxOSAyLjQzLjQ4MiAzLjMxLjQ4MiAxLjE4NCAwIDEuOTg0LS4yOSAyLjQ2OS0uODY3YTEuOTUgMS45NSAwIDAwLjQzNi0xLjY2Yy0uMjYtMS4zODMtMS45MDItMi44NzUtNS4yNDgtNC43ODRsMi4zNzYtMTYuNzYyTDY0IDIwLjV6IiBmaWxsPSIjRkZGIi8+CiAgICA8L2c+CiAgPC9nPgo8L3N2Zz4K",
+        "name": "Amazon S3"
+      },
+      "statements": [
+        {
+          "action": "s3:GetObject",
+          "effect": "Allow",
+          "resource": "arn:aws:s3:::*",
+          "service": "s3",
+          "source": {
+            "index": "0",
+            "policyName": "AWSLambdaS3ExecutionRole-3cf7babf-7975-4d81-8b10-1529a1dcec6e",
+            "policyType": "managed"
+          }
+        },
+        {
+          "action": "s3:*",
+          "effect": "Allow",
+          "resource": "*",
+          "service": "s3",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonS3FullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "action": "s3:Get*",
+          "effect": "Allow",
+          "resource": "*",
+          "service": "s3",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonS3ReadOnlyAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "action": "s3:List*",
+          "effect": "Allow",
+          "resource": "*",
+          "service": "s3",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonS3ReadOnlyAccess",
+            "policyType": "managed"
+          }
+        }
+      ]
+    },
+    "s3-object-lambda": {
+      "service": {
+        "icon": "data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNjQgNjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGcgdHJhbnNmb3JtPSJzY2FsZSguOCkiPgogICAgPGRlZnM+CiAgICAgIDxsaW5lYXJHcmFkaWVudCB4MT0iMCUiIHkxPSIxMDAlIiB4Mj0iMTAwJSIgeTI9IjAlIiBpZD0iYSI+CiAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzFCNjYwRiIgb2Zmc2V0PSIwJSIvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiM2Q0FFM0UiIG9mZnNldD0iMTAwJSIvPgogICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgPHBhdGggZD0iTTAgMGg4MHY4MEgweiIgZmlsbD0idXJsKCNhKSIvPgogICAgICA8cGF0aCBkPSJNNjAuODM2IDQyLjg5M2wuMzg0LTIuNzA0YzMuNTQgMi4xMiAzLjU4NyAyLjk5NyAzLjU4NiAzLjAyLS4wMDYuMDA2LS42MS41MS0zLjk3LS4zMTZ6bS0xLjk0My0uNTRDNTIuNzczIDQwLjUgNDQuMjUgMzYuNTkgNDAuOCAzNC45NmMwLS4wMTQuMDA0LS4wMjcuMDA0LS4wNDFhMi40MDYgMi40MDYgMCAwMC0yLjQwNC0yLjQwMyAyLjQwNiAyLjQwNiAwIDAwLTIuNDAyIDIuNDAzIDIuNDA2IDIuNDA2IDAgMDAyLjQwMiAyLjQwM2MuNTgyIDAgMS4xMS0uMjE3IDEuNTI3LS41NjIgNC4wNTggMS45MiAxMi41MTUgNS43NzQgMTguNjggNy41OTRMNTYuMTcgNjEuNTZhLjk1NS45NTUgMCAwMC0uMDEuMTRjMCAxLjUxNi02LjcwNyA0LjI5OS0xNy42NjYgNC4yOTktMTEuMDc1IDAtMTcuODUzLTIuNzgzLTE3Ljg1My00LjI5OCAwLS4wNDYtLjAwMy0uMDkxLS4wMS0uMTM2bC01LjA5My0zNy4yMDdjNC40MDkgMy4wMzUgMTMuODkyIDQuNjQgMjIuOTYyIDQuNjQgOS4wNTYgMCAxOC41MjMtMS42IDIyLjk0LTQuNjI1bC0yLjU0NyAxNy45Nzl6TTE1IDIwLjQ3OEMxNS4wNzIgMTkuMTYyIDIyLjYzNCAxNCAzOC41IDE0YzE1Ljg2NCAwIDIzLjQyNyA1LjE2IDIzLjUgNi40Nzh2LjQ0OUM2MS4xMyAyMy44NzcgNTEuMzMgMjcgMzguNSAyN2MtMTIuODUyIDAtMjIuNjU3LTMuMTMyLTIzLjUtNi4wODd2LS40MzV6bTQ5IC4wMjJjMC0zLjQ2NS05LjkzNC04LjUtMjUuNS04LjVTMTMgMTcuMDM1IDEzIDIwLjVsLjA5NC43NTQgNS41NDggNDAuNTI0QzE4Ljc3NSA2Ni4zMSAzMC44NiA2OCAzOC40OTQgNjhjOS40NzIgMCAxOS41MzUtMi4xNzggMTkuNjY1LTYuMjJsMi4zOTYtMTYuODk2YzEuMzMzLjMxOSAyLjQzLjQ4MiAzLjMxLjQ4MiAxLjE4NCAwIDEuOTg0LS4yOSAyLjQ2OS0uODY3YTEuOTUgMS45NSAwIDAwLjQzNi0xLjY2Yy0uMjYtMS4zODMtMS45MDItMi44NzUtNS4yNDgtNC43ODRsMi4zNzYtMTYuNzYyTDY0IDIwLjV6IiBmaWxsPSIjRkZGIi8+CiAgICA8L2c+CiAgPC9nPgo8L3N2Zz4K",
+        "name": "Amazon S3 Object Lambda"
+      },
+      "statements": [
+        {
+          "action": "s3-object-lambda:*",
+          "effect": "Allow",
+          "resource": "*",
+          "service": "s3-object-lambda",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonS3FullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "action": "s3-object-lambda:Get*",
+          "effect": "Allow",
+          "resource": "*",
+          "service": "s3-object-lambda",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonS3ReadOnlyAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "action": "s3-object-lambda:List*",
+          "effect": "Allow",
+          "resource": "*",
+          "service": "s3-object-lambda",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonS3ReadOnlyAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "action": "s3-object-lambda:WriteGetObjectResponse",
+          "effect": "Allow",
+          "resource": "*",
+          "service": "s3-object-lambda",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonS3ObjectLambdaExecutionRolePolicy",
+            "policyType": "managed"
+          }
+        }
+      ]
+    },
+    "logs": {
+      "service": {
+        "icon": "data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNjQgNjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGcgdHJhbnNmb3JtPSJzY2FsZSguOCkiPgogICAgPGRlZnM+CiAgICAgIDxsaW5lYXJHcmFkaWVudCB4MT0iMCUiIHkxPSIxMDAlIiB4Mj0iMTAwJSIgeTI9IjAlIiBpZD0iYSI+CiAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iI0IwMDg0RCIgb2Zmc2V0PSIwJSIvPgogICAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiNGRjRGOEIiIG9mZnNldD0iMTAwJSIvPgogICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgPHBhdGggZD0iTTAgMGg4MHY4MEgweiIgZmlsbD0idXJsKCNhKSIvPgogICAgICA8cGF0aCBkPSJNNTUuMDYgNDYuNzc3YzAtMy45MDktMy4yMDItNy4wOS03LjEzOC03LjA5LTMuOTM1IDAtNy4xMzYgMy4xODEtNy4xMzYgNy4wOSAwIDMuOTEgMy4yIDcuMDkgNy4xMzYgNy4wOXM3LjEzNy0zLjE4IDcuMTM3LTcuMDltMi4wMSAwYzAgNS4wMTEtNC4xMDMgOS4wODctOS4xNDcgOS4wODctNS4wNDMgMC05LjE0Ny00LjA3Ni05LjE0Ny05LjA4NyAwLTUuMDEgNC4xMDQtOS4wODYgOS4xNDctOS4wODYgNS4wNDQgMCA5LjE0OCA0LjA3NiA5LjE0OCA5LjA4Nm04LjQ0IDEzLjY5N0w1OC41IDU0LjIwM2ExMy4wMzMgMTMuMDMzIDAgMDEtMS45NDcgMi4xNmw2Ljk5OCA2LjI3YTEuNDc0IDEuNDc0IDAgMDAyLjA2Ni0uMTA3IDEuNDUzIDEuNDUzIDAgMDAtLjEwOC0yLjA1Mm0tMTcuNTg4LTIuODEyYzYuMDQzIDAgMTAuOTU4LTQuODgzIDEwLjk1OC0xMC44ODVzLTQuOTE1LTEwLjg4NC0xMC45NTgtMTAuODg0Yy02LjA0MSAwLTEwLjk1NyA0Ljg4Mi0xMC45NTcgMTAuODg0IDAgNi4wMDIgNC45MTYgMTAuODg1IDEwLjk1NyAxMC44ODVtMTkuMTkgNi4yQTMuNDgzIDMuNDgzIDAgMDE2NC41MjkgNjVhMy40NzUgMy40NzUgMCAwMS0yLjMyMi0uODgzTDU0LjkzMSA1Ny42YTEyLjkzNSAxMi45MzUgMCAwMS03LjAwOSAyLjA2Yy03LjE1IDAtMTIuOTY3LTUuNzc5LTEyLjk2Ny0xMi44ODIgMC03LjEwMiA1LjgxNy0xMi44ODEgMTIuOTY3LTEyLjg4MSA3LjE1MSAwIDEyLjk2OSA1Ljc3OSAxMi45NjkgMTIuODgxIDAgMi4wMzgtLjQ5MiAzLjk2LTEuMzQ0IDUuNjc0bDcuMzA5IDYuNTRhMy40NDQgMy40NDQgMCAwMS4yNTYgNC44NzJNMjEuMjggMjkuMzkzYzAgLjUxOS4wMzIgMS4wMzYuMDk0IDEuNTM2YS45OTQuOTk0IDAgMDEtLjgyMyAxLjEwNmMtMi40NzIuNjM0LTYuNTQgMi41NTMtNi41NCA4LjMxIDAgNC4zNDggMi40MTMgNi43NDggNC40MzkgNy45OTYuNjkxLjQzMyAxLjUxLjY2NCAyLjM3My42NzNsMTIuMTIyLjAxMS0uMDAyIDEuOTk3LTEyLjEzMS0uMDFjLTEuMjQ2LS4wMTQtMi40MjgtLjM1MS0zLjQyOC0uOTc3QzE1LjM3NyA0OC43OTcgMTIgNDUuODkgMTIgNDAuMzQ1YzAtNi42ODMgNC42LTkuMTUzIDcuMy0xMC4wMjYtLjAyLS4zMDctLjAzLS42MTctLjAzLS45MjYgMC01LjQ2IDMuNzI4LTExLjEyMyA4LjY3Mi0xMy4xNzEgNS43ODItMi40MDcgMTEuOTA4LTEuMjE0IDE2LjM4NCAzLjE4OSAxLjM4OCAxLjM2NCAyLjUyOSAzLjAyIDMuNDA0IDQuOTM3YTYuNTA5IDYuNTA5IDAgMDE0LjE1NC0xLjUwMmMzLjAwMiAwIDYuMzgyIDIuMjY0IDYuOTg0IDcuMjE1IDIuODEyLjY0NCA4Ljc1MyAyLjg5NCA4Ljc1MyAxMC4zNjIgMCAyLjk4MS0uOTQxIDUuNDQ0LTIuNzk4IDcuMzE5bC0xLjQzMy0xLjQwMWMxLjQ3My0xLjQ4OCAyLjIyLTMuNDc5IDIuMjItNS45MTggMC02LjUzMi01LjUwNC04LjE1Ny03Ljg3My04LjU1MWExLjAwMiAxLjAwMiAwIDAxLS44MjMtMS4xNTdjLS4zMjktNC4wNTUtMi43NTMtNS44NzItNS4wMy01Ljg3Mi0xLjQzNyAwLTIuNzg0LjY5NS0zLjY5NyAxLjkwN2ExLjAwNiAxLjAwNiAwIDAxLTEuNzUtLjI1OGMtLjgyMy0yLjI2Ni0yLjAxLTQuMTcxLTMuNTI1LTUuNjYxLTMuODgtMy44MTYtOS4xODQtNC44NS0xNC4xOTUtMi43NjYtNC4xNyAxLjcyNy03LjQzNyA2LjcwMi03LjQzNyAxMS4zMjgiIGZpbGw9IiNGRkYiLz4KICAgIDwvZz4KICA8L2c+Cjwvc3ZnPgo=",
+        "name": "Amazon CloudWatch Logs"
+      },
+      "statements": [
+        {
+          "action": "logs:CreateLogGroup",
+          "effect": "Allow",
+          "resource": "arn:aws:logs:us-east-1:949263681218:*",
+          "service": "logs",
+          "source": {
+            "index": "0",
+            "policyName": "AWSLambdaBasicExecutionRole-538f1517-9c21-45d3-b075-c070e1a23f23",
+            "policyType": "managed"
+          }
+        },
+        {
+          "action": "logs:CreateLogStream",
+          "effect": "Allow",
+          "resource": "arn:aws:logs:us-east-1:949263681218:log-group:/aws/lambda/manip:*",
+          "service": "logs",
+          "source": {
+            "index": "1",
+            "policyName": "AWSLambdaBasicExecutionRole-538f1517-9c21-45d3-b075-c070e1a23f23",
+            "policyType": "managed"
+          }
+        },
+        {
+          "action": "logs:PutLogEvents",
+          "effect": "Allow",
+          "resource": "arn:aws:logs:us-east-1:949263681218:log-group:/aws/lambda/manip:*",
+          "service": "logs",
+          "source": {
+            "index": "1",
+            "policyName": "AWSLambdaBasicExecutionRole-538f1517-9c21-45d3-b075-c070e1a23f23",
+            "policyType": "managed"
+          }
+        },
+        {
+          "action": "logs:CreateLogGroup",
+          "effect": "Allow",
+          "resource": "*",
+          "service": "logs",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonS3ObjectLambdaExecutionRolePolicy",
+            "policyType": "managed"
+          }
+        },
+        {
+          "action": "logs:CreateLogStream",
+          "effect": "Allow",
+          "resource": "*",
+          "service": "logs",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonS3ObjectLambdaExecutionRolePolicy",
+            "policyType": "managed"
+          }
+        },
+        {
+          "action": "logs:PutLogEvents",
+          "effect": "Allow",
+          "resource": "*",
+          "service": "logs",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonS3ObjectLambdaExecutionRolePolicy",
+            "policyType": "managed"
+          }
+        }
+      ]
+    }
+  },
+  "roleName": "manip-s3",
+  "trustedEntities": [
+    "lambda.amazonaws.com"
+  ]
+}
