@@ -54,7 +54,7 @@ chmod +x lamda.sh
 ![execute](https://user-images.githubusercontent.com/53372486/146252057-18478125-9428-4424-b08e-968fef359cc7.png)<br/>
 
 ----------------------------------------------------------------------------------------------------------------------------<br/>
-### reate a bash script to deploy your react app to S3
+### Create a bash script to deploy your react app to S3
 **Create deploy script**<br/>
 ```
 nano react.sh
