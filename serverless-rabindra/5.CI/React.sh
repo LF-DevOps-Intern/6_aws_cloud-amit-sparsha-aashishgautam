@@ -23,3 +23,6 @@ npm run build
 
 #deploy in s3 
 aws s3 sync build s3://rabindra-deploy --profile lft-training
+
+#host static
+aws s3 website s3://rabindra-deploy --index-document index.html --error-document error.html

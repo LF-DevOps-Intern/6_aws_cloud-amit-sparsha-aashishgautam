@@ -88,6 +88,9 @@ npm run build
 
 #deploy in s3 
 aws s3 sync build s3://rabindra-deploy --profile lft-training
+
+#host static
+aws s3 website s3://rabindra-deploy --index-document index.html --error-document error.html
 ```
 ![reactsh](https://user-images.githubusercontent.com/53372486/146342782-540c8a59-c597-4ff3-919e-9f673ef098a8.png)<br/>
 
