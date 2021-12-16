@@ -1,47 +1,56 @@
 ### Create a bash script to deploy your lambda functions
 
-#### First, we change the directory to lf-react where our react app resides. Then, we open react.sh file using text editor as follows;
-
+#### First, we write a basch script to deploy the lambda functions.
 ```
-cd lf-react
-nano react.sh
+nano lambda-func.sh
 ```
-
 ```
 #!/bin/bash
 
-# Syncing all files
-echo "Uploading files to aashish-react..."
-aws s3 sync build s3://aashish-react --profile lft-training
+#create lamda.py
+echo "import json
 
-# Upload index.html
-echo "Uploading index.html"
-aws s3 cp build/index.html s3://aashish-react/index.html --profile lft-training
+def lambda_handler(event, context):
+    # TODO implement
+    return {
+	'statusCode': 200,
+        'body': json.dumps({"Hello":"Aashish"})
+    }" > lamda.py
+#zip
+zip lamda.zip lamda.py
 
-# Generating presigned URL
-echo "Generating presigned URL"
-aws s3 presign s3://aashish-react/index.html --profile lft-training
+#create fuction
+
+aws lambda create-function 
+--function-name aashish-deployment 
+--runtime python3.9 --zip-file fileb://lamda.zip 
+--role arn:aws:iam::949263681218:role/service-role/aashish-api1-role-tota7vd0 --handler lamda.lambda_handler  
+--profile lft-training
+```
+![basch script to deploy lambda function](https://user-images.githubusercontent.com/24239688/146279855-00d49a55-cbb7-40ed-81f3-4fee1adf4e91.PNG)
+
+#### Next, we give executive permission to the bash file.
+```
+chmod +x lambda-func.sh
 ```
 
-![bash script to deploy react app to s3](https://user-images.githubusercontent.com/24239688/146278854-75720d9a-72be-4216-81fd-ad6d77fc848a.PNG)
+![lambda sh file given executive permission](https://user-images.githubusercontent.com/24239688/146279875-0e960263-bccb-49e6-b6b7-e848bef50ffe.PNG)
 
-#### Next, we provide executive permission to the bash and run it as follows;
-
+#### Then, we run the bash scipt as follows;
 ```
-chmod +x react.sh
-./react.sh
+./lambda-func.sh
 ```
 
-![run bash script](https://user-images.githubusercontent.com/24239688/146278870-364228de-6557-4606-ba91-21dabc9b3678.PNG)
+![running bash script](https://user-images.githubusercontent.com/24239688/146279879-cd3986d4-541a-4672-90d2-a1e09d9f46ff.PNG)
 
-#### Now, we get the presigned URL and can verify the link via web browser.
+#### We verify the created function via Lambda functions as follows;
 
-![presigned url generated](https://user-images.githubusercontent.com/24239688/146278915-8aa68944-6dd0-4853-b614-5137016dcddd.PNG)
+![function wwas created successfully](https://user-images.githubusercontent.com/24239688/146279887-a2c66687-9f18-40c0-a0c0-9c7dcecc4aba.PNG)
 
-#### The presigned link was verified via web browser.
+#### We can verify the code.
 
-![verified via presigned url](https://user-images.githubusercontent.com/24239688/146278930-5da7cb42-dd4a-4ca2-87be-94e6ef574657.PNG)
+![verifying code](https://user-images.githubusercontent.com/24239688/146279907-d32f8f90-c185-4dd6-8070-bd9b9c3d8b52.PNG)
 
-#### Lastly, we can verify the deployed react app via S3 bucket too.
+#### Also, we can the test the code deployed through bash script.
 
-![verified via s3 bucket](https://user-images.githubusercontent.com/24239688/146278934-d17f01a1-9853-49e4-9991-f7296c2e030c.PNG)
+![test event results](https://user-images.githubusercontent.com/24239688/146279910-953ec4df-bcba-4955-b44e-0285672140a0.PNG)
