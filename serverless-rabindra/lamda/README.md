@@ -1,4 +1,4 @@
-1. Create two Lambda Functions
+4. Create two Lambda Functions
 - First Lambda function returns 200 Response as {“Hello”: “Default”}
 - Second Lambda function returns 200 Response as {“Hello”: “{Dynamic route name}”}
 - Configure API Gateway with that hits first lambda function on / and the second lambda function on /*
@@ -37,7 +37,7 @@ def lambda_handler(event, context):
 
 Execute result<br/>
 
-![execute2](https://user-images.githubusercontent.com/53372486/146256233-0e201972-c894-47e4-9c3f-34fb6be9d884.png)<br/>
+![execute2](https://user-images.githubusercontent.com/53372486/146399800-1c48a215-8348-426b-b4af-95c0b9f12181.png)<br/>
 
 Now Search API gateway <br/>
 Click on Create api<br/>
