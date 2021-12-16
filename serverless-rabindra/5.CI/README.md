@@ -92,7 +92,7 @@ aws s3 sync build s3://rabindra-deploy --profile lft-training
 #host static
 aws s3 website s3://rabindra-deploy --index-document index.html --error-document error.html
 ```
-![reactsh](https://user-images.githubusercontent.com/53372486/146342782-540c8a59-c597-4ff3-919e-9f673ef098a8.png)<br/>
+![reactsh](https://user-images.githubusercontent.com/53372486/146415185-94240c3c-4e7a-48c2-8a3b-08ca6a023b06.png)<br/>
 
 **Create policy json**<br/>
 ```
@@ -139,8 +139,13 @@ nano policy.json
 
 ![web](https://user-images.githubusercontent.com/53372486/146342844-3260471a-0f3f-41de-b5c3-7b3787ae3066.png)<br/>
 
+**Bucket website endpoint (http://rabindra-deploy.s3-website-us-east-1.amazonaws.com/)**<br/>
+
+![static host](https://user-images.githubusercontent.com/53372486/146414673-5b4b0ff5-220a-475b-9bbb-3164f85c276a.png)<br/>
+
 -----------------------------------------------------------------------------------------------------------------<br/>
 ### Integrate both these scripts with one of Jenkins, Github Actions, CircleCI or TravisCI
+
 
 
 
