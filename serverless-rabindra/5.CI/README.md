@@ -146,6 +146,10 @@ nano policy.json
 -----------------------------------------------------------------------------------------------------------------<br/>
 ### Integrate both these scripts with one of Jenkins, Github Actions, CircleCI or TravisCI
 
+**Github** <br/>
+
+![github](https://user-images.githubusercontent.com/53372486/146533115-bdb39e77-b64e-4fbc-95b4-a970dbeaa863.png)<br/>
+
 **Create Action in Github**<br/>
 
 ![workflow](https://user-images.githubusercontent.com/53372486/146506191-2c06e8e9-d547-4c47-8f69-8c05e787a071.png)<br/>
@@ -166,10 +170,19 @@ nano policy.json
 
 ![lamda fuction](https://user-images.githubusercontent.com/53372486/146506210-c58f0ced-6dc0-4b16-bb5f-cc129302b651.png)<br/>
 
+**Do same process for react**<br/>
+**Check build**<br/>
 
+![buildreact](https://user-images.githubusercontent.com/53372486/146533097-c48a6a2e-129e-4b67-85f0-772b2825f1fe.png)<br/>
 
+**Now add yml file**<br/>
 
+![ymlraect](https://user-images.githubusercontent.com/53372486/146533145-b1bf2660-402f-4cb4-8f0d-03cbfe0925f1.png)<br/>
 
+**Open s3**<br/>
 
+![reactbucket](https://user-images.githubusercontent.com/53372486/146533156-2651219f-795d-4777-8153-f705b5fd84bc.png)<br/>
 
+**Both YML**<br/>
 
+![bothyml](https://user-images.githubusercontent.com/53372486/146533085-437a5e58-9edd-4979-9358-79fd9c2260c2.png)<br/>
