@@ -51,4 +51,4 @@ jobs:
  - name: Deploying lamda function to aws
         run: |
          aws lambda update-function-code --function-name rabindra-deployment \
-         --zip-file fileb://lambda_function.zip        
+         --zip-file fileb://lambda.zip        
