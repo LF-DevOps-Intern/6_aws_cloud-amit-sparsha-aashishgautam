@@ -2,7 +2,7 @@ name: deploy-py-lambda
 on:
   push:
     branches:
-      - serverless-rabindra
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
