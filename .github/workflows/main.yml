@@ -35,3 +35,14 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
+          
+      - name: creating Zip file of lamda.py
+        run: |
+         zip lambda.zip lamda.py
+         
+      - name: Deploying lamda function to aws
+        run: |
+         aws lambda create-function --function-name rabindra-deployment \
+         --runtime python3.9 --zip-file fileb://lamda.zip \
+         --role arn:aws:iam::949263681218:role/service-role/rabindra-api-role-lmiu2v86 \
+         --handler lamda.lambda_handler
