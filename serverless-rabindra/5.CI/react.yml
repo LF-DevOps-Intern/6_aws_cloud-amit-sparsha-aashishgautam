@@ -40,15 +40,19 @@ jobs:
         run: |
          #create bucket
          aws s3api create-bucket --bucket rabindra-deploy --region us-east-1 
+
          #make bucket public
          aws s3api put-public-access-block \
           --bucket rabindra-deploy \
           --public-access-block-configuration "BlockPublicAcls=false,IgnorePublicAcls=false,BlockPublicPolicy=false,RestrictPublicBuckets=false" 
+
          #put policy
          aws s3api put-bucket-policy \
          --bucket rabindra-deploy \
          --policy file://policy.json 
+
          #deploy in s3 
          aws s3 sync build s3://rabindra-deploy
+         
          #host static
          aws s3 website s3://rabindra-deploy --index-document index.html --error-document error.html 
