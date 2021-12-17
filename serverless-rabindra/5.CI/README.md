@@ -90,7 +90,7 @@ npm run build
 aws s3 sync build s3://rabindra-deploy --profile lft-training
 
 #host static
-aws s3 website s3://rabindra-deploy --index-document index.html --error-document error.html
+aws s3 website s3://rabindra-deploy --index-document index.html --error-document error.html --profile lft-training
 ```
 ![reactsh](https://user-images.githubusercontent.com/53372486/146415185-94240c3c-4e7a-48c2-8a3b-08ca6a023b06.png)<br/>
 
@@ -146,6 +146,25 @@ nano policy.json
 -----------------------------------------------------------------------------------------------------------------<br/>
 ### Integrate both these scripts with one of Jenkins, Github Actions, CircleCI or TravisCI
 
+Create Action in Github<br/>
+
+![workflow](https://user-images.githubusercontent.com/53372486/146506191-2c06e8e9-d547-4c47-8f69-8c05e787a071.png)<br/>
+
+Add Actions secrets<br/>
+
+![secrets](https://user-images.githubusercontent.com/53372486/146506237-35259b88-f321-4947-afc1-80e8ad9064bd.png)<br/>
+
+Now add yml file<br/>
+
+![yml](https://user-images.githubusercontent.com/53372486/146506457-fa4a4394-8171-4309-b97a-20197cfcb061.png)<br/>
+
+Check build<br/>
+
+![lamdbuild](https://user-images.githubusercontent.com/53372486/146506223-75064c13-427f-4614-ac5d-23fbc1124d22.png)<br/>
+
+Open lamda <br/>
+
+![lamda fuction](https://user-images.githubusercontent.com/53372486/146506210-c58f0ced-6dc0-4b16-bb5f-cc129302b651.png)<br/>
 
 
 
