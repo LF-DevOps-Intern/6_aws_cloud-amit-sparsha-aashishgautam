@@ -45,14 +45,6 @@ jobs:
     - name: Run a multi-line script
       run: |
             #create lamda.py
-echo "import json
-
-def lambda_handler(event, context):
-    # TODO implement
-    return {
-	'statusCode': 200,
-        'body': json.dumps({"Hello":"rabindra"})
-    }" > lamda.py
 #zip
 zip lamda.zip lamda.py
 
