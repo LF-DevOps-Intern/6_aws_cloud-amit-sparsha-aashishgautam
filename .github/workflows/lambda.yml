@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - cicd-manip
+  workflow_dispatch:
 
 
 jobs:
