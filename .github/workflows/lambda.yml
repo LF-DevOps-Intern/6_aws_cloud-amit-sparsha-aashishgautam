@@ -1,0 +1,28 @@
+name: Automatically Deploy Lambda
+
+on:
+  push:
+    branches:
+      - cicd-manip
+
+
+jobs:
+  deploy:
+    name: lambda-deploy-using-action 
+    runs-on: ubuntu-latest
+    environment: staging
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: AWS Configuration
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+ # On our repository go to Settings > Secrets from their add “New repository secret” to secrets.
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1 
+        
+    - name: Bash Script
+      run: bash ./lambda-deploy/lambda-create.sh
